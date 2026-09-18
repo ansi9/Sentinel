@@ -1,29 +1,26 @@
-# IntelX: Trustworthy Computer Vision Integrity Assurance System
+# Sentinel: Vision AI Data & Pre-Training Integrity Firewall
 
-**Problem Statement ID:** 26228
-**Organization:** Ministry of Defence (MoD)
-**Department:** Indian Army (DGIS)
-**Category:** Software | **Theme:** Blockchain & Cybersecurity
-**Operating Mode:** 100% Offline, Air-Gapped, Model-Agnostic
+**Category:** Software | **Theme:** Trust, Safety & Digital Security
+**Operating Mode:** 100% Offline, Air-Gapped, Zero-Cloud Execution
 
 ---
 
 ## 1. System Overview
 
-**IntelX** (Visual Integrity, Governance, & Inference Ledger for Computer Vision) is a model-agnostic, offline, air-gapped integrity assurance platform engineered to evaluate and cryptographically verify multi-contributor computer vision pipelines across their entire lifecycle:
+**Sentinel** is a model-agnostic, local, air-gapped data quality and integrity firewall engineered to evaluate and cryptographically verify computer vision pipelines before expensive cloud GPU training:
 
-1. **Training Datasets (COCO / YOLO)**: Detects near-duplicate flooding, systematic mislabelling, label flipping, out-of-distribution (OOD) insertion, trigger/patch injection, and aggregates source-level contributor risk.
+1. **Training Datasets (COCO / YOLO)**: Detects near-duplicate frame flooding using perceptual differential hashing ($d\text{Hash}$), spatial backdoor patch triggers via localized Laplacian kurtosis, multivariate color-moment out-of-distribution (OOD) insertion, and systematic annotation errors.
 2. **Computer Vision Models (ONNX / PyTorch / TorchScript)**: Performs SHA-256 weight fingerprinting, White-Box vs Black-Box access-aware inspection, standardized behavioral test battery execution, and backdoor trojan activation analysis.
 3. **Inference Provenance & Cryptography**: Establishes cryptographic binding across `Image Hash + Model Digest + Preprocessing + Config + Output Hash + Nonce + Timestamp` with Ed25519 digital signatures, real-time post-hoc tamper detection, and replay prevention.
 4. **Distribution Shift Radar**: Evaluates terrain, sensor, illumination, and seasonal drift against declared reference envelopes.
 5. **Tamper-Evident Audit Ledger**: Maintains an immutable, cryptographically chained block event ledger (`SHA-256(prev_hash + entry)`).
-6. **Assurance Governance**: Generates MoD-compliant JSON Assurance Reports with explicit dispositions: `ACCEPT`, `REVIEW`, or `QUARANTINE`.
+6. **Assurance Governance**: Generates enterprise-compliant JSON/HTML/PDF Assurance Reports with explicit risk dispositions: `ACCEPT`, `REVIEW`, or `QUARANTINE`.
 
 ---
 
-![IntelX architecture diagram](docs/architecture.svg)
+## 2. Architecture & Directory Structure
 
-Threat model, trust boundaries, and explicit out-of-scope threats: [`docs/threat_model.md`](docs/threat_model.md).
+The codebase is organized strictly into modular, single-responsibility components with zero redundant coupling and clean separation of concerns.
 
 ---
 
@@ -32,7 +29,7 @@ Threat model, trust boundaries, and explicit out-of-scope threats: [`docs/threat
 The codebase is organized strictly into modular, single-responsibility components with zero redundant coupling and no single file exceeding 300 lines of code.
 
 ```
-intelx/
+Sentinel/
 ├── backend/
 │   ├── api/
 │   │   ├── routes_audit.py        # Tamper-evident ledger verification routes
