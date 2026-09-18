@@ -1,0 +1,47 @@
+[
+  {
+    "filename": "clean_dataset_coco.zip",
+    "size_bytes": 1261454,
+    "download_url": "/sample_assets/clean_dataset_coco.zip"
+  },
+  {
+    "filename": "poisoned_dataset_coco.zip",
+    "size_bytes": 1261560,
+    "download_url": "/sample_assets/poisoned_dataset_coco.zip"
+  },
+  {
+    "filename": "clean_dataset_yolo.zip",
+    "size_bytes": 1264065,
+    "download_url": "/sample_assets/clean_dataset_yolo.zip"
+  },
+  {
+    "filename": "clean_vision_model.onnx",
+    "size_bytes": 32872,
+    "download_url": "/sample_assets/clean_vision_model.onnx"
+  },
+  {
+    "filename": "backdoored_vision_model.onnx",
+    "size_bytes": 32872,
+    "download_url": "/sample_assets/backdoored_vision_model.onnx"
+  },
+  {
+    "filename": "tactical_model.pt",
+    "size_bytes": 34843,
+    "download_url": "/sample_assets/tactical_model.pt"
+  },
+  {
+    "filename": "clean_inference_record.json",
+    "size_bytes": 1330,
+    "download_url": "/sample_assets/clean_inference_record.json"
+  },
+  {
+    "filename": "tampered_inference_record.json",
+    "size_bytes": 1336,
+    "download_url": "/sample_assets/tampered_inference_record.json"
+  },
+  {
+    "filename": "replay_inference_record.json",
+    "size_bytes": 1333,
+    "download_url": "/sample_assets/replay_inference_record.json"
+  }
+]

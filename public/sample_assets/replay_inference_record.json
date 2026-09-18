@@ -1,0 +1,43 @@
+{
+  "record_id": "rec_replay_stale_01",
+  "timestamp": "2024-01-01T00:00:00Z",
+  "nonce": "f6d5434b836341f79275cb3aceaf8acf",
+  "sequence_number": 1,
+  "image_hash": "da6f2ea4e9b3ae6707d460cd5e9ab61a25f168d7367d0422005e66294517c212",
+  "model_digest": "48ec0a5886e9f9b7843709d7c6bed8ed2bd09b88cf7d4f1ea86fb2a201b53fe2",
+  "preprocessing_hash": "a9947cef4259a5541048fc4c10743e938cdb72f0c523f07048f2110f22496e8d",
+  "config_hash": "e7670013a36bed0acd2b28f8ec8eff11088a45cbef538c59d82bf26eed718773",
+  "output_hash": "9c030240791b9c8a2f59daadd14ced01232665ca392b0a9a700fa4150d6dec2c",
+  "provenance_hash": "29aaada2eea34e2c4871db1a0f595f16c3cf9d944609940bada7c87dbffc56a3",
+  "signature": "4UjSa8YM3Niej2iiL6/tEa80XQLqBd/vfuaRzoKgMUpc+LFZvwt2ieyiElx0NEvazCclZkimF7pNY4GY5hAjDQ==",
+  "predictions": [
+    {
+      "class_name": "military_vehicle",
+      "confidence": 0.96,
+      "box": [
+        0.2,
+        0.25,
+        0.65,
+        0.75
+      ]
+    },
+    {
+      "class_name": "personnel",
+      "confidence": 0.89,
+      "box": [
+        0.7,
+        0.4,
+        0.82,
+        0.88
+      ]
+    }
+  ],
+  "image_metadata": {
+    "path": "test_assets/images/tactical_sample_001.jpg"
+  },
+  "model_id": "model_48ec0a5886e9",
+  "is_valid": true,
+  "tampering_detected": false,
+  "replay_detected": false,
+  "verification_errors": []
+}
