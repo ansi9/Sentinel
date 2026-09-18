@@ -1,0 +1,30 @@
+# Direct (top-level) dependencies, pinned to the exact versions this
+# system was built and tested against. Exact pins (not >=) are required
+# for reproducible air-gapped deployment (PRD section 10: "All required
+# ... Python wheels ... must be pre-provisioned before entering the
+# air-gapped environment") -- a loose bound resolves to "whatever exists
+# today," which is not reproducible once offline.
+#
+# For the full transitive closure to pre-provision wheels for an
+# air-gapped environment, use requirements.lock.txt instead (generated
+# from this file with `uv pip compile requirements.txt -o
+# requirements.lock.txt`, or `pip freeze` inside a venv built from this
+# file). Bump a version here only after re-running the full test suite
+# against it, then regenerate the lock file.
+#
+# httpx is required only by the test suite (starlette.testclient.TestClient),
+# not by the running service itself.
+fastapi==0.141.1
+uvicorn==0.52.4
+pydantic==2.13.5
+python-multipart==0.0.32
+numpy==2.5.2
+pillow==12.3.0
+onnx==1.22.0
+onnxruntime==1.29.0
+torch==2.13.0
+cryptography==50.0.1
+jinja2==3.1.6
+reportlab==5.0.1
+pytest==9.1.1
+httpx==0.28.1
